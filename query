@@ -1,0 +1,16 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255)
+);
+INSERT INTO users (name, email, password) VALUES ('Jane', 'jane.doe@example.com', 'password123');
+
+
+SELECT * FROM users;
+
+UPDATE users SET name = 'Jane joe' WHERE id = 1;
+
+
+DELETE FROM users WHERE id = 1;
+
